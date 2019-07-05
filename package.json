@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "react": "16.6.1",
-    "react-native": "0.57.7",
-    "react-native-google-analytics-bridge": "^6.1.2"
+    "react-native": "0.60.0",
+    "react-native-google-analytics-bridge": "^6.1.2",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.9",
@@ -41,5 +44,6 @@
       "<rootDir>/node_modules/"
     ],
     "cacheDirectory": ".jest/cache"
-  }
+  },
+  "snyk": true
 }
